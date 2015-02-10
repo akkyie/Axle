@@ -6,20 +6,103 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		661FEA0E1A89CC9700CFEBDC /* AxisTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661FEA0D1A89CC9700CFEBDC /* AxisTest.swift */; };
+		661FEA121A89CCDB00CFEBDC /* Axle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664403E91A87C80B00984923 /* Axle.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		661FEA091A89CC9700CFEBDC /* AxisTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AxisTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		661FEA0C1A89CC9700CFEBDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		661FEA0D1A89CC9700CFEBDC /* AxisTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AxisTest.swift; sourceTree = "<group>"; };
+		664403E91A87C80B00984923 /* Axle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Axle.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		661FEA061A89CC9700CFEBDC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
 /* Begin PBXGroup section */
+		661FEA0A1A89CC9700CFEBDC /* AxisTest */ = {
+			isa = PBXGroup;
+			children = (
+				661FEA0D1A89CC9700CFEBDC /* AxisTest.swift */,
+				661FEA0B1A89CC9700CFEBDC /* Supporting Files */,
+			);
+			path = AxisTest;
+			sourceTree = "<group>";
+		};
+		661FEA0B1A89CC9700CFEBDC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				661FEA0C1A89CC9700CFEBDC /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		664403C71A87C7DF00984923 = {
 			isa = PBXGroup;
 			children = (
+				664403EB1A87C80F00984923 /* Axle */,
+				661FEA0A1A89CC9700CFEBDC /* AxisTest */,
+				664403D31A87C7ED00984923 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
+		664403D31A87C7ED00984923 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				661FEA091A89CC9700CFEBDC /* AxisTest.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		664403EB1A87C80F00984923 /* Axle */ = {
+			isa = PBXGroup;
+			children = (
+				664403E91A87C80B00984923 /* Axle.swift */,
+			);
+			name = Axle;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		661FEA081A89CC9700CFEBDC /* AxisTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 661FEA0F1A89CC9700CFEBDC /* Build configuration list for PBXNativeTarget "AxisTest" */;
+			buildPhases = (
+				661FEA051A89CC9700CFEBDC /* Sources */,
+				661FEA061A89CC9700CFEBDC /* Frameworks */,
+				661FEA071A89CC9700CFEBDC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AxisTest;
+			productName = AxisTest;
+			productReference = 661FEA091A89CC9700CFEBDC /* AxisTest.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		664403C81A87C7DF00984923 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0610;
+				TargetAttributes = {
+					661FEA081A89CC9700CFEBDC = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+				};
 			};
 			buildConfigurationList = 664403CB1A87C7DF00984923 /* Build configuration list for PBXProject "Axle" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -29,14 +112,129 @@
 				en,
 			);
 			mainGroup = 664403C71A87C7DF00984923;
+			productRefGroup = 664403D31A87C7ED00984923 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				661FEA081A89CC9700CFEBDC /* AxisTest */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		661FEA071A89CC9700CFEBDC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		661FEA051A89CC9700CFEBDC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				661FEA0E1A89CC9700CFEBDC /* AxisTest.swift in Sources */,
+				661FEA121A89CCDB00CFEBDC /* Axle.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
 /* Begin XCBuildConfiguration section */
+		661FEA101A89CC9700CFEBDC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = AxisTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		661FEA111A89CC9700CFEBDC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = AxisTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 		664403CC1A87C7DF00984923 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -52,6 +250,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		661FEA0F1A89CC9700CFEBDC /* Build configuration list for PBXNativeTarget "AxisTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				661FEA101A89CC9700CFEBDC /* Debug */,
+				661FEA111A89CC9700CFEBDC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		664403CB1A87C7DF00984923 /* Build configuration list for PBXProject "Axle" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

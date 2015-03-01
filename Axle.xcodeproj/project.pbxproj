@@ -257,6 +257,7 @@
 				661FEA111A89CC9700CFEBDC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		664403CB1A87C7DF00984923 /* Build configuration list for PBXProject "Axle" */ = {
 			isa = XCConfigurationList;

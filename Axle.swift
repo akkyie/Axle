@@ -10,9 +10,54 @@ import Foundation
 import Swift
 import Accelerate
 
-//public protocol ElementType {}
-//extension Double: ElementType {}
-//extension Float: ElementType {}
+public protocol ElementType: Comparable, Printable {
+	class var la_matrix_from_buffer: (UnsafePointer<Self>, la_count_t, la_count_t, la_count_t, la_hint_t, la_attribute_t) -> la_object_t! { get }
+	class var la_matrix_to_buffer: (UnsafeMutablePointer<Self>, la_count_t, la_object_t!) -> la_status_t  { get }
+	class var la_norm: (la_object_t!, la_norm_t) -> Self { get }
+	class var la_scale: (la_object_t!, Self) -> la_object_t! { get }
+	class var la_scalar_type: Int32 { get }
+	init(Double)
+}
+
+extension Double: ElementType {
+	public static var la_matrix_from_buffer: (UnsafePointer<Double>, la_count_t, la_count_t, la_count_t, la_hint_t, la_attribute_t) -> la_object_t! {
+		return la_matrix_from_double_buffer
+	}
+
+	public static var la_matrix_to_buffer: (UnsafeMutablePointer<Double>, la_count_t, la_object_t!) -> la_status_t {
+		return la_matrix_to_double_buffer
+	}
+
+	public static var la_norm: (la_object_t!, la_norm_t) -> Double {
+		return la_norm_as_double
+	}
+
+	public static var la_scale: (la_object_t!, Double) -> la_object_t! {
+		return la_scale_with_double
+	}
+
+	public static var la_scalar_type: Int32 = LA_SCALAR_TYPE_DOUBLE
+}
+
+extension Float: ElementType {
+	public static var la_matrix_from_buffer: (UnsafePointer<Float>, la_count_t, la_count_t, la_count_t, la_hint_t, la_attribute_t) -> la_object_t! {
+		return la_matrix_from_float_buffer
+	}
+
+	public static var la_matrix_to_buffer: (UnsafeMutablePointer<Float>, la_count_t, la_object_t!) -> la_status_t {
+		return la_matrix_to_float_buffer
+	}
+
+	public static var la_norm: (la_object_t!, la_norm_t) -> Float {
+		return la_norm_as_float
+	}
+
+	public static var la_scale: (la_object_t!, Float) -> la_object_t! {
+		return la_scale_with_float
+	}
+
+	public static var la_scalar_type: Int32 = LA_SCALAR_TYPE_FLOAT
+}
 
 enum Hint {
 	case None;
@@ -115,8 +160,7 @@ enum Norm {
 	}
 }
 
-//public class Matrix<T: ElementType>
-final public class Matrix: Equatable {
+final public class Matrix <T: ElementType> : Equatable {
 
 	private let _matrix: la_object_t
 
@@ -124,8 +168,8 @@ final public class Matrix: Equatable {
 		self._matrix = matrix
 	}
 
-	convenience init (_
-		elements: [Double],
+	convenience init <T: ElementType> (_
+		elements: [T],
 		rows: UInt,
 		columns: UInt,
 		hint: Hint = .None,
@@ -134,11 +178,10 @@ final public class Matrix: Equatable {
 			assert(rows > 0, "Matrix must have at least one row");
 			assert(columns > 0, "Matrix must have at least one column");
 			assert(UInt(elements.count) == rows * columns, "Elements count must equal to rows times columuns");
-			self.init(la_matrix_from_double_buffer(elements, rows, columns, columns, hint._rawValue, attribute._rawValue))
+			self.init(T.la_matrix_from_buffer(elements, rows, columns, columns, hint._rawValue, attribute._rawValue))
 	}
 
-	convenience init (_
-		rows: [Double]...) {
+	convenience init (_ rows: [T]...) {
 			assert(rows.count > 0, "Matrix must have at least one row");
 			assert(rows[0].count > 0, "Matrix must have at least one column");
 			self.init([].join(rows), rows: UInt(rows.count), columns: UInt(rows[0].count))
@@ -148,21 +191,21 @@ final public class Matrix: Equatable {
 		rows: UInt,
 		columns: UInt,
 		attribute: Attribute = .None) {
-			let elements = [Double](count: Int(rows * columns), repeatedValue: 0.0)
-			self.init(la_matrix_from_double_buffer(elements, UInt(elements.count), 1, 1, Hint.None._rawValue, attribute._rawValue))
+			let elements = [T](count: Int(rows * columns), repeatedValue: T(0.0))
+			self.init(T.la_matrix_from_buffer(elements, UInt(elements.count), 1, 1, Hint.None._rawValue, attribute._rawValue))
 	}
 
 	convenience init (identity
 		size: UInt,
 		attribute: Attribute = .None) {
-			self.init(la_identity_matrix(size, UInt32(LA_SCALAR_TYPE_DOUBLE), attribute._rawValue))
+			self.init(la_identity_matrix(size, UInt32(T.la_scalar_type), attribute._rawValue))
 	}
 
 	convenience init (diagonal
-		elements: [Double],
+		elements: [T],
 		index: Int,
 		attribute: Attribute = .None) {
-			let vector = la_matrix_from_double_buffer(elements, UInt(elements.count), 1, 1, Hint.None._rawValue, attribute._rawValue)
+			let vector = T.la_matrix_from_buffer(elements, UInt(elements.count), 1, 1, Hint.None._rawValue, attribute._rawValue)
 			self.init(la_diagonal_matrix_from_vector(vector, index))
 	}
 }
@@ -177,10 +220,10 @@ extension Matrix {
 		return UInt(la_matrix_cols(self._matrix))
 	}
 
-	var matrix: [[Double]] {
-		var columns = [[Double]]()
+	var matrix: [[T]] {
+		var columns = [[T]]()
 		for j in 0 ..< self.columnCount {
-			var rows = [Double]()
+			var rows = [T]()
 			for i in 0 ..< self.rowCount {
 				rows.append(self[i, j])
 			}
@@ -189,28 +232,28 @@ extension Matrix {
 		return columns
 	}
 
-	var elements: [Double] {
-		var elements = [Double](count: Int(self.rowCount * self.columnCount), repeatedValue: 0.0)
-		let status = la_matrix_to_double_buffer(&elements, self.columnCount, self._matrix)
+	var elements: [T] {
+		var elements = [T](count: Int(self.rowCount * self.columnCount), repeatedValue: T(0.0))
+		let status = T.la_matrix_to_buffer(&elements, self.columnCount, self._matrix)
 		return elements
 	}
 
-	func getElements(callback: (elements: [Double], status: Status) -> Void) {
-		var elements = [Double](count: Int(self.rowCount * self.columnCount), repeatedValue: 0.0)
-		let status = la_matrix_to_double_buffer(&elements, self.columnCount, self._matrix)
+	func getElements(callback: (elements: [T], status: Status) -> Void) {
+		var elements = [T](count: Int(self.rowCount * self.columnCount), repeatedValue: T(0.0))
+		let status = T.la_matrix_to_buffer(&elements, self.columnCount, self._matrix)
 		callback(elements: elements, status: Status(status))
 	}
 
-	func norm(norm: Norm) -> Double {
-		return la_norm_as_double(self._matrix, norm._rawValue)
+	func norm(norm: Norm) -> T {
+		return T.la_norm(self._matrix, norm._rawValue)
 	}
 }
 
 extension Matrix: Printable {
 	public var description: String {
-		return NSArray(array: self.matrix.map({
-			NSArray(array: $0.map({
-				String(format: "%.13f", $0)
+		return NSArray(array: self.matrix.map({ (elements: [T]) -> String in
+			return NSArray(array: elements.map({ (element: T) -> String in
+				return element.description
 			})).componentsJoinedByString(", ")
 		})).componentsJoinedByString("; ")
 	}
@@ -251,7 +294,7 @@ extension Matrix {
 
 extension Matrix {
 
-	subscript(index: UInt) -> Double {
+	subscript(index: UInt) -> T {
 		return self.elements[Int(index)]
 	}
 
@@ -259,15 +302,15 @@ extension Matrix {
 		return self.submatrix(rowRange, columnRange: columnRange)
 	}
 
-	subscript(row: UInt, col:UInt) -> Double {
+	subscript(row: UInt, col:UInt) -> T {
 		return self[row...row, col...col].elements[0]
 	}
 }
 
 extension Matrix {
 
-	func scale(scalar: Double) -> Matrix {
-		return Matrix(la_scale_with_double(self._matrix, scalar))
+	func scale(scalar: T) -> Matrix {
+		return Matrix(T.la_scale(self._matrix, scalar))
 	}
 
 	func sum(matrix: Matrix) -> Matrix {
@@ -295,7 +338,7 @@ extension Matrix {
 	}
 }
 
-public func == (left: Matrix, right: Matrix) -> Bool {
+public func == <T: ElementType> (left: Matrix<T>, right: Matrix<T>) -> Bool {
 	return (
 		left.rowCount == right.rowCount &&
 		left.columnCount == right.columnCount &&
@@ -304,14 +347,14 @@ public func == (left: Matrix, right: Matrix) -> Bool {
 		}))
 }
 
-public func * (left: Double, right: Matrix) -> Matrix {
+public func * <T: ElementType> (left: T, right: Matrix<T>) -> Matrix<T> {
 	return right.scale(left)
 }
 
-public func + (left: Matrix, right: Matrix) -> Matrix {
+public func + <T: ElementType> (left: Matrix<T>, right: Matrix<T>) -> Matrix<T> {
 	return left.sum(right)
 }
 
-public func - (left: Matrix, right: Matrix) -> Matrix {
+public func - <T: ElementType> (left: Matrix<T>, right: Matrix<T>) -> Matrix<T> {
 	return left.difference(right)
 }

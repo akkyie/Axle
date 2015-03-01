@@ -10,10 +10,6 @@ import Foundation
 import Swift
 import Accelerate
 
-//public protocol ElementType {}
-//extension Double: ElementType {}
-//extension Float: ElementType {}
-
 enum Hint {
 	case None;
 	case ShapeDiagonal;
@@ -115,7 +111,6 @@ enum Norm {
 	}
 }
 
-//public class Matrix<T: ElementType>
 final public class Matrix: Equatable {
 
 	private let _matrix: la_object_t

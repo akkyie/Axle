@@ -10,6 +10,8 @@
 		66210DDB1AA47053000F371F /* AxleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66210DDA1AA47053000F371F /* AxleTests.swift */; };
 		66210DDC1AA47053000F371F /* Axle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 662C83D01AA29C4B003EF153 /* Axle.framework */; };
 		66210DE21AA47076000F371F /* Axle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664403E91A87C80B00984923 /* Axle.swift */; };
+		66210E291AA4741E000F371F /* Axle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664403E91A87C80B00984923 /* Axle.swift */; };
+		66210E2A1AA4741F000F371F /* Axle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664403E91A87C80B00984923 /* Axle.swift */; };
 		662C83D51AA29C4B003EF153 /* Axle.h in Headers */ = {isa = PBXBuildFile; fileRef = 662C83D41AA29C4B003EF153 /* Axle.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		662C83F31AA29CBE003EF153 /* Axle.h in Headers */ = {isa = PBXBuildFile; fileRef = 662C83F21AA29CBE003EF153 /* Axle.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
@@ -295,6 +297,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66210E2A1AA4741F000F371F /* Axle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +305,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66210E291AA4741E000F371F /* Axle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -59,7 +59,7 @@ extension Float: ElementType {
 	public static var la_scalar_type: Int32 = LA_SCALAR_TYPE_FLOAT
 }
 
-enum Hint {
+public enum Hint {
 	case None;
 	case ShapeDiagonal;
 	case ShapeLowerTriangular;
@@ -84,7 +84,7 @@ enum Hint {
 	}
 }
 
-enum Attribute {
+public enum Attribute {
 	case None;
 	case EnableLogging;
 
@@ -99,7 +99,7 @@ enum Attribute {
 	}
 }
 
-enum Status {
+public enum Status {
 	case Success;
 	case PoorlyConditionedWarning;
 	case InternalError;
@@ -143,7 +143,7 @@ enum Status {
 	}
 }
 
-enum Norm {
+public enum Norm {
 	case L1;
 	case L2;
 	case LInfinity;
@@ -161,14 +161,13 @@ enum Norm {
 }
 
 final public class Matrix <T: ElementType> : Equatable {
-
 	private let _matrix: la_object_t
 
 	private init (_ matrix: la_object_t) {
 		self._matrix = matrix
 	}
 
-	convenience init <T: ElementType> (_
+	public convenience init <T: ElementType> (_
 		elements: [T],
 		rows: UInt,
 		columns: UInt,
@@ -181,13 +180,13 @@ final public class Matrix <T: ElementType> : Equatable {
 			self.init(T.la_matrix_from_buffer(elements, rows, columns, columns, hint._rawValue, attribute._rawValue))
 	}
 
-	convenience init (_ rows: [T]...) {
+	public convenience init (_ rows: [T]...) {
 			assert(rows.count > 0, "Matrix must have at least one row");
 			assert(rows[0].count > 0, "Matrix must have at least one column");
 			self.init([].join(rows), rows: UInt(rows.count), columns: UInt(rows[0].count))
 	}
 
-	convenience init (zero
+	public convenience init (zero
 		rows: UInt,
 		columns: UInt,
 		attribute: Attribute = .None) {
@@ -195,13 +194,13 @@ final public class Matrix <T: ElementType> : Equatable {
 			self.init(T.la_matrix_from_buffer(elements, UInt(elements.count), 1, 1, Hint.None._rawValue, attribute._rawValue))
 	}
 
-	convenience init (identity
+	public convenience init (identity
 		size: UInt,
 		attribute: Attribute = .None) {
 			self.init(la_identity_matrix(size, UInt32(T.la_scalar_type), attribute._rawValue))
 	}
 
-	convenience init (diagonal
+	public convenience init (diagonal
 		elements: [T],
 		index: Int,
 		attribute: Attribute = .None) {
@@ -210,17 +209,16 @@ final public class Matrix <T: ElementType> : Equatable {
 	}
 }
 
-extension Matrix {
-
-	var rowCount: UInt {
+public extension Matrix {
+	public var rowCount: UInt {
 		return UInt(la_matrix_rows(self._matrix))
 	}
 
-	var columnCount: UInt {
+	public var columnCount: UInt {
 		return UInt(la_matrix_cols(self._matrix))
 	}
 
-	var matrix: [[T]] {
+	public var matrix: [[T]] {
 		var columns = [[T]]()
 		for j in 0 ..< self.columnCount {
 			var rows = [T]()
@@ -232,19 +230,19 @@ extension Matrix {
 		return columns
 	}
 
-	var elements: [T] {
+	public var elements: [T] {
 		var elements = [T](count: Int(self.rowCount * self.columnCount), repeatedValue: T(0.0))
 		let status = T.la_matrix_to_buffer(&elements, self.columnCount, self._matrix)
 		return elements
 	}
 
-	func getElements(callback: (elements: [T], status: Status) -> Void) {
+	public func getElements(callback: (elements: [T], status: Status) -> Void) {
 		var elements = [T](count: Int(self.rowCount * self.columnCount), repeatedValue: T(0.0))
 		let status = T.la_matrix_to_buffer(&elements, self.columnCount, self._matrix)
 		callback(elements: elements, status: Status(status))
 	}
 
-	func norm(norm: Norm) -> T {
+	public func norm(norm: Norm) -> T {
 		return T.la_norm(self._matrix, norm._rawValue)
 	}
 }
@@ -259,17 +257,16 @@ extension Matrix: Printable {
 	}
 }
 
-extension Matrix {
-
-	var transposedMatrix: Matrix {
+public extension Matrix {
+	public var transposedMatrix: Matrix {
 		return Matrix(la_transpose(self._matrix))
 	}
 
-	func normalizedVector(norm: Norm) -> Matrix {
+	public func normalizedVector(norm: Norm) -> Matrix {
 		return Matrix(la_normalized_vector(self._matrix, norm._rawValue))
 	}
 
-	func submatrix(rowRange: Range<UInt>, columnRange: Range<UInt>) -> Matrix {
+	public func submatrix(rowRange: Range<UInt>, columnRange: Range<UInt>) -> Matrix {
 		return Matrix(
 			la_matrix_slice(
 				self._matrix,
@@ -279,61 +276,59 @@ extension Matrix {
 				columnRange.endIndex - columnRange.startIndex))
 	}
 
-	func rowVector(row: UInt) -> Matrix {
+	public func rowVector(row: UInt) -> Matrix {
 		return Matrix(la_vector_from_matrix_row(self._matrix, row))
 	}
 
-	func columnVector(column: UInt) -> Matrix {
+	public func columnVector(column: UInt) -> Matrix {
 		return Matrix(la_vector_from_matrix_col(self._matrix, column))
 	}
 
-	func diagonalVector(index: Int) -> Matrix {
+	public func diagonalVector(index: Int) -> Matrix {
 		return Matrix(la_vector_from_matrix_diagonal(self._matrix, index))
 	}
 }
 
-extension Matrix {
-
-	subscript(index: UInt) -> T {
+public extension Matrix {
+	public subscript(index: UInt) -> T {
 		return self.elements[Int(index)]
 	}
 
-	subscript(rowRange: Range<UInt>, columnRange: Range<UInt>) -> Matrix {
+	public subscript(rowRange: Range<UInt>, columnRange: Range<UInt>) -> Matrix {
 		return self.submatrix(rowRange, columnRange: columnRange)
 	}
 
-	subscript(row: UInt, col:UInt) -> T {
+	public subscript(row: UInt, col:UInt) -> T {
 		return self[row...row, col...col].elements[0]
 	}
 }
 
-extension Matrix {
-
-	func scale(scalar: T) -> Matrix {
+public extension Matrix {
+	public func scale(scalar: T) -> Matrix {
 		return Matrix(T.la_scale(self._matrix, scalar))
 	}
 
-	func sum(matrix: Matrix) -> Matrix {
+	public func sum(matrix: Matrix) -> Matrix {
 		return Matrix(la_sum(self._matrix, matrix._matrix))
 	}
 
-	func difference(matrix: Matrix) -> Matrix {
+	public func difference(matrix: Matrix) -> Matrix {
 		return Matrix(la_difference(self._matrix, matrix._matrix))
 	}
 
-	func elementwiseProduct(matrix: Matrix) -> Matrix {
+	public func elementwiseProduct(matrix: Matrix) -> Matrix {
 		return Matrix(la_elementwise_product(self._matrix, matrix._matrix))
 	}
 
-	func innerProduct(matrix: Matrix) -> Matrix {
+	public func innerProduct(matrix: Matrix) -> Matrix {
 		return Matrix(la_inner_product(self._matrix, matrix._matrix))
 	}
 
-	func outerProduct(matrix: Matrix) -> Matrix {
+	public func outerProduct(matrix: Matrix) -> Matrix {
 		return Matrix(la_outer_product(self._matrix, matrix._matrix))
 	}
 
-	func matrixProduct(matrix: Matrix) -> Matrix {
+	public func matrixProduct(matrix: Matrix) -> Matrix {
 		return Matrix(la_matrix_product(self._matrix, matrix._matrix))
 	}
 }

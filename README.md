@@ -8,3 +8,5 @@ You can take advantage of both Accelarate.framework and Swift!
 - High Performance
 - Lazy Evaluation
 - Modern syntax of Swift
+
+Still in Development.

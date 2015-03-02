@@ -7,16 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		661FEA0E1A89CC9700CFEBDC /* AxisTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661FEA0D1A89CC9700CFEBDC /* AxisTest.swift */; };
-		661FEA121A89CCDB00CFEBDC /* Axle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664403E91A87C80B00984923 /* Axle.swift */; };
+		66210DDB1AA47053000F371F /* AxleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66210DDA1AA47053000F371F /* AxleTests.swift */; };
+		66210DDC1AA47053000F371F /* Axle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 662C83D01AA29C4B003EF153 /* Axle.framework */; };
+		66210DE21AA47076000F371F /* Axle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664403E91A87C80B00984923 /* Axle.swift */; };
 		662C83D51AA29C4B003EF153 /* Axle.h in Headers */ = {isa = PBXBuildFile; fileRef = 662C83D41AA29C4B003EF153 /* Axle.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		662C83F31AA29CBE003EF153 /* Axle.h in Headers */ = {isa = PBXBuildFile; fileRef = 662C83F21AA29CBE003EF153 /* Axle.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		66210DDD1AA47053000F371F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 664403C81A87C7DF00984923 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 662C83CF1AA29C4B003EF153;
+			remoteInfo = "Axle (OS X)";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		661FEA091A89CC9700CFEBDC /* AxisTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AxisTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		661FEA0C1A89CC9700CFEBDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		661FEA0D1A89CC9700CFEBDC /* AxisTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AxisTest.swift; sourceTree = "<group>"; };
+		66210DD61AA47053000F371F /* AxleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AxleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		66210DD91AA47053000F371F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66210DDA1AA47053000F371F /* AxleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AxleTests.swift; sourceTree = "<group>"; };
 		662C83D01AA29C4B003EF153 /* Axle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Axle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		662C83D31AA29C4B003EF153 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		662C83D41AA29C4B003EF153 /* Axle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Axle.h; sourceTree = "<group>"; };
@@ -27,10 +38,11 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		661FEA061A89CC9700CFEBDC /* Frameworks */ = {
+		66210DD31AA47053000F371F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66210DDC1AA47053000F371F /* Axle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,19 +63,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		661FEA0A1A89CC9700CFEBDC /* AxisTest */ = {
+		66210DD71AA47053000F371F /* AxleTests */ = {
 			isa = PBXGroup;
 			children = (
-				661FEA0D1A89CC9700CFEBDC /* AxisTest.swift */,
-				661FEA0B1A89CC9700CFEBDC /* Supporting Files */,
+				66210DDA1AA47053000F371F /* AxleTests.swift */,
+				66210DD81AA47053000F371F /* Supporting Files */,
 			);
-			path = AxisTest;
+			path = AxleTests;
 			sourceTree = "<group>";
 		};
-		661FEA0B1A89CC9700CFEBDC /* Supporting Files */ = {
+		66210DD81AA47053000F371F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				661FEA0C1A89CC9700CFEBDC /* Info.plist */,
+				66210DD91AA47053000F371F /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -106,9 +118,9 @@
 			isa = PBXGroup;
 			children = (
 				664403EB1A87C80F00984923 /* Axle */,
-				661FEA0A1A89CC9700CFEBDC /* AxisTest */,
 				662C83D11AA29C4B003EF153 /* Axle (OS X) */,
 				662C83EF1AA29CBE003EF153 /* Axle (iOS) */,
+				66210DD71AA47053000F371F /* AxleTests */,
 				664403D31A87C7ED00984923 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -116,9 +128,9 @@
 		664403D31A87C7ED00984923 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				661FEA091A89CC9700CFEBDC /* AxisTest.xctest */,
 				662C83D01AA29C4B003EF153 /* Axle.framework */,
 				662C83EE1AA29CBE003EF153 /* Axle.framework */,
+				66210DD61AA47053000F371F /* AxleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -153,21 +165,22 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		661FEA081A89CC9700CFEBDC /* AxisTest */ = {
+		66210DD51AA47053000F371F /* AxleTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 661FEA0F1A89CC9700CFEBDC /* Build configuration list for PBXNativeTarget "AxisTest" */;
+			buildConfigurationList = 66210DDF1AA47053000F371F /* Build configuration list for PBXNativeTarget "AxleTests" */;
 			buildPhases = (
-				661FEA051A89CC9700CFEBDC /* Sources */,
-				661FEA061A89CC9700CFEBDC /* Frameworks */,
-				661FEA071A89CC9700CFEBDC /* Resources */,
+				66210DD21AA47053000F371F /* Sources */,
+				66210DD31AA47053000F371F /* Frameworks */,
+				66210DD41AA47053000F371F /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				66210DDE1AA47053000F371F /* PBXTargetDependency */,
 			);
-			name = AxisTest;
-			productName = AxisTest;
-			productReference = 661FEA091A89CC9700CFEBDC /* AxisTest.xctest */;
+			name = AxleTests;
+			productName = AxleTests;
+			productReference = 66210DD61AA47053000F371F /* AxleTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		662C83CF1AA29C4B003EF153 /* Axle (OS X) */ = {
@@ -214,7 +227,7 @@
 			attributes = {
 				LastUpgradeCheck = 0610;
 				TargetAttributes = {
-					661FEA081A89CC9700CFEBDC = {
+					66210DD51AA47053000F371F = {
 						CreatedOnToolsVersion = 6.1.1;
 					};
 					662C83CF1AA29C4B003EF153 = {
@@ -237,15 +250,15 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				661FEA081A89CC9700CFEBDC /* AxisTest */,
 				662C83CF1AA29C4B003EF153 /* Axle (OS X) */,
 				662C83ED1AA29CBE003EF153 /* Axle (iOS) */,
+				66210DD51AA47053000F371F /* AxleTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		661FEA071A89CC9700CFEBDC /* Resources */ = {
+		66210DD41AA47053000F371F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -269,12 +282,12 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		661FEA051A89CC9700CFEBDC /* Sources */ = {
+		66210DD21AA47053000F371F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				661FEA0E1A89CC9700CFEBDC /* AxisTest.swift in Sources */,
-				661FEA121A89CCDB00CFEBDC /* Axle.swift in Sources */,
+				66210DDB1AA47053000F371F /* AxleTests.swift in Sources */,
+				66210DE21AA47076000F371F /* Axle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,8 +307,16 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		66210DDE1AA47053000F371F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 662C83CF1AA29C4B003EF153 /* Axle (OS X) */;
+			targetProxy = 66210DDD1AA47053000F371F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
-		661FEA101A89CC9700CFEBDC /* Debug */ = {
+		66210DE01AA47053000F371F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -333,7 +354,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = AxisTest/Info.plist;
+				INFOPLIST_FILE = AxleTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = YES;
@@ -344,7 +365,7 @@
 			};
 			name = Debug;
 		};
-		661FEA111A89CC9700CFEBDC /* Release */ = {
+		66210DE11AA47053000F371F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -377,7 +398,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = AxisTest/Info.plist;
+				INFOPLIST_FILE = AxleTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -414,7 +435,7 @@
 				FRAMEWORK_VERSION = A;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -470,6 +491,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_VERSION = A;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -607,14 +629,13 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		661FEA0F1A89CC9700CFEBDC /* Build configuration list for PBXNativeTarget "AxisTest" */ = {
+		66210DDF1AA47053000F371F /* Build configuration list for PBXNativeTarget "AxleTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				661FEA101A89CC9700CFEBDC /* Debug */,
-				661FEA111A89CC9700CFEBDC /* Release */,
+				66210DE01AA47053000F371F /* Debug */,
+				66210DE11AA47053000F371F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 		662C83E71AA29C4B003EF153 /* Build configuration list for PBXNativeTarget "Axle (OS X)" */ = {
 			isa = XCConfigurationList;
@@ -623,6 +644,7 @@
 				662C83E41AA29C4B003EF153 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		662C84011AA29CBE003EF153 /* Build configuration list for PBXNativeTarget "Axle (iOS)" */ = {
 			isa = XCConfigurationList;
@@ -631,6 +653,7 @@
 				662C84031AA29CBE003EF153 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		664403CB1A87C7DF00984923 /* Build configuration list for PBXProject "Axle" */ = {
 			isa = XCConfigurationList;

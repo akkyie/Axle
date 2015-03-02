@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "662C83ED1AA29CBE003EF153"
-               BuildableName = "Axle (iOS).framework"
+               BuildableName = "Axle.framework"
                BlueprintName = "Axle (iOS)"
                ReferencedContainer = "container:Axle.xcodeproj">
             </BuildableReference>
@@ -57,7 +57,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "662C83ED1AA29CBE003EF153"
-            BuildableName = "Axle (iOS).framework"
+            BuildableName = "Axle.framework"
             BlueprintName = "Axle (iOS)"
             ReferencedContainer = "container:Axle.xcodeproj">
          </BuildableReference>
@@ -76,7 +76,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "662C83ED1AA29CBE003EF153"
-            BuildableName = "Axle (iOS).framework"
+            BuildableName = "Axle.framework"
             BlueprintName = "Axle (iOS)"
             ReferencedContainer = "container:Axle.xcodeproj">
          </BuildableReference>
@@ -94,7 +94,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "662C83ED1AA29CBE003EF153"
-            BuildableName = "Axle (iOS).framework"
+            BuildableName = "Axle.framework"
             BlueprintName = "Axle (iOS)"
             ReferencedContainer = "container:Axle.xcodeproj">
          </BuildableReference>

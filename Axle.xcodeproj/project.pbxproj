@@ -7,43 +7,79 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		66F458201BF0549100CE3B1E /* Axle.h in Headers */ = {isa = PBXBuildFile; fileRef = 66F4581F1BF0549100CE3B1E /* Axle.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		66F458271BF0549100CE3B1E /* Axle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66F4581C1BF0549100CE3B1E /* Axle.framework */; };
-		66F4582C1BF0549100CE3B1E /* AxleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F4582B1BF0549100CE3B1E /* AxleTests.swift */; };
+		66F4587C1BF0557200CE3B1E /* Axle-iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 66F4587B1BF0557200CE3B1E /* Axle-iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		66F458831BF0557200CE3B1E /* Axle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66F458791BF0557200CE3B1E /* Axle.framework */; };
+		66F458881BF0557200CE3B1E /* Axle_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F458871BF0557200CE3B1E /* Axle_iOSTests.swift */; };
+		66F458981BF0557A00CE3B1E /* Axle-OSX.h in Headers */ = {isa = PBXBuildFile; fileRef = 66F458971BF0557A00CE3B1E /* Axle-OSX.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		66F4589F1BF0557B00CE3B1E /* Axle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66F458951BF0557A00CE3B1E /* Axle.framework */; };
+		66F458A41BF0557B00CE3B1E /* Axle_OSXTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F458A31BF0557B00CE3B1E /* Axle_OSXTests.swift */; };
+		66F458AC1BF055AE00CE3B1E /* Axle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F458391BF054D500CE3B1E /* Axle.swift */; };
+		66F458AD1BF055AF00CE3B1E /* Axle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F458391BF054D500CE3B1E /* Axle.swift */; };
+		66F458AE1BF055AF00CE3B1E /* Axle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F458391BF054D500CE3B1E /* Axle.swift */; };
+		66F458AF1BF055B000CE3B1E /* Axle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F458391BF054D500CE3B1E /* Axle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		66F458281BF0549100CE3B1E /* PBXContainerItemProxy */ = {
+		66F458841BF0557200CE3B1E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 66F458131BF0549100CE3B1E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 66F4581B1BF0549100CE3B1E;
-			remoteInfo = Axle;
+			remoteGlobalIDString = 66F458781BF0557200CE3B1E;
+			remoteInfo = "Axle-iOS";
+		};
+		66F458A01BF0557B00CE3B1E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 66F458131BF0549100CE3B1E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 66F458941BF0557A00CE3B1E;
+			remoteInfo = "Axle-OSX";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		66F4581C1BF0549100CE3B1E /* Axle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Axle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		66F4581F1BF0549100CE3B1E /* Axle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Axle.h; sourceTree = "<group>"; };
-		66F458211BF0549100CE3B1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		66F458261BF0549100CE3B1E /* AxleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AxleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		66F4582B1BF0549100CE3B1E /* AxleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AxleTests.swift; sourceTree = "<group>"; };
-		66F4582D1BF0549100CE3B1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66F458391BF054D500CE3B1E /* Axle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Axle.swift; sourceTree = "<group>"; };
+		66F458791BF0557200CE3B1E /* Axle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Axle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		66F4587B1BF0557200CE3B1E /* Axle-iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Axle-iOS.h"; sourceTree = "<group>"; };
+		66F4587D1BF0557200CE3B1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66F458821BF0557200CE3B1E /* Axle-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Axle-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		66F458871BF0557200CE3B1E /* Axle_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Axle_iOSTests.swift; sourceTree = "<group>"; };
+		66F458891BF0557200CE3B1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66F458951BF0557A00CE3B1E /* Axle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Axle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		66F458971BF0557A00CE3B1E /* Axle-OSX.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Axle-OSX.h"; sourceTree = "<group>"; };
+		66F458991BF0557A00CE3B1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66F4589E1BF0557B00CE3B1E /* Axle-OSXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Axle-OSXTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		66F458A31BF0557B00CE3B1E /* Axle_OSXTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Axle_OSXTests.swift; sourceTree = "<group>"; };
+		66F458A51BF0557B00CE3B1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		66F458181BF0549100CE3B1E /* Frameworks */ = {
+		66F458751BF0557200CE3B1E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		66F458231BF0549100CE3B1E /* Frameworks */ = {
+		66F4587F1BF0557200CE3B1E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66F458271BF0549100CE3B1E /* Axle.framework in Frameworks */,
+				66F458831BF0557200CE3B1E /* Axle.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66F458911BF0557A00CE3B1E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66F4589B1BF0557B00CE3B1E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66F4589F1BF0557B00CE3B1E /* Axle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,8 +89,11 @@
 		66F458121BF0549100CE3B1E = {
 			isa = PBXGroup;
 			children = (
-				66F4581E1BF0549100CE3B1E /* Axle */,
-				66F4582A1BF0549100CE3B1E /* AxleTests */,
+				66F458391BF054D500CE3B1E /* Axle.swift */,
+				66F4587A1BF0557200CE3B1E /* Axle-iOS */,
+				66F458861BF0557200CE3B1E /* Axle-iOSTests */,
+				66F458961BF0557A00CE3B1E /* Axle-OSX */,
+				66F458A21BF0557B00CE3B1E /* Axle-OSXTests */,
 				66F4581D1BF0549100CE3B1E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -62,78 +101,142 @@
 		66F4581D1BF0549100CE3B1E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				66F4581C1BF0549100CE3B1E /* Axle.framework */,
-				66F458261BF0549100CE3B1E /* AxleTests.xctest */,
+				66F458791BF0557200CE3B1E /* Axle.framework */,
+				66F458821BF0557200CE3B1E /* Axle-iOSTests.xctest */,
+				66F458951BF0557A00CE3B1E /* Axle.framework */,
+				66F4589E1BF0557B00CE3B1E /* Axle-OSXTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		66F4581E1BF0549100CE3B1E /* Axle */ = {
+		66F4587A1BF0557200CE3B1E /* Axle-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				66F4581F1BF0549100CE3B1E /* Axle.h */,
-				66F458211BF0549100CE3B1E /* Info.plist */,
+				66F4587B1BF0557200CE3B1E /* Axle-iOS.h */,
+				66F4587D1BF0557200CE3B1E /* Info.plist */,
 			);
-			path = Axle;
+			path = "Axle-iOS";
 			sourceTree = "<group>";
 		};
-		66F4582A1BF0549100CE3B1E /* AxleTests */ = {
+		66F458861BF0557200CE3B1E /* Axle-iOSTests */ = {
 			isa = PBXGroup;
 			children = (
-				66F4582B1BF0549100CE3B1E /* AxleTests.swift */,
-				66F4582D1BF0549100CE3B1E /* Info.plist */,
+				66F458871BF0557200CE3B1E /* Axle_iOSTests.swift */,
+				66F458891BF0557200CE3B1E /* Info.plist */,
 			);
-			path = AxleTests;
+			path = "Axle-iOSTests";
+			sourceTree = "<group>";
+		};
+		66F458961BF0557A00CE3B1E /* Axle-OSX */ = {
+			isa = PBXGroup;
+			children = (
+				66F458971BF0557A00CE3B1E /* Axle-OSX.h */,
+				66F458991BF0557A00CE3B1E /* Info.plist */,
+			);
+			path = "Axle-OSX";
+			sourceTree = "<group>";
+		};
+		66F458A21BF0557B00CE3B1E /* Axle-OSXTests */ = {
+			isa = PBXGroup;
+			children = (
+				66F458A31BF0557B00CE3B1E /* Axle_OSXTests.swift */,
+				66F458A51BF0557B00CE3B1E /* Info.plist */,
+			);
+			path = "Axle-OSXTests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		66F458191BF0549100CE3B1E /* Headers */ = {
+		66F458761BF0557200CE3B1E /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66F458201BF0549100CE3B1E /* Axle.h in Headers */,
+				66F4587C1BF0557200CE3B1E /* Axle-iOS.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66F458921BF0557A00CE3B1E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66F458981BF0557A00CE3B1E /* Axle-OSX.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		66F4581B1BF0549100CE3B1E /* Axle */ = {
+		66F458781BF0557200CE3B1E /* Axle-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 66F458301BF0549100CE3B1E /* Build configuration list for PBXNativeTarget "Axle" */;
+			buildConfigurationList = 66F4588A1BF0557200CE3B1E /* Build configuration list for PBXNativeTarget "Axle-iOS" */;
 			buildPhases = (
-				66F458171BF0549100CE3B1E /* Sources */,
-				66F458181BF0549100CE3B1E /* Frameworks */,
-				66F458191BF0549100CE3B1E /* Headers */,
-				66F4581A1BF0549100CE3B1E /* Resources */,
+				66F458741BF0557200CE3B1E /* Sources */,
+				66F458751BF0557200CE3B1E /* Frameworks */,
+				66F458761BF0557200CE3B1E /* Headers */,
+				66F458771BF0557200CE3B1E /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Axle;
-			productName = Axle;
-			productReference = 66F4581C1BF0549100CE3B1E /* Axle.framework */;
+			name = "Axle-iOS";
+			productName = "Axle-iOS";
+			productReference = 66F458791BF0557200CE3B1E /* Axle.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		66F458251BF0549100CE3B1E /* AxleTests */ = {
+		66F458811BF0557200CE3B1E /* Axle-iOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 66F458331BF0549100CE3B1E /* Build configuration list for PBXNativeTarget "AxleTests" */;
+			buildConfigurationList = 66F4588D1BF0557200CE3B1E /* Build configuration list for PBXNativeTarget "Axle-iOSTests" */;
 			buildPhases = (
-				66F458221BF0549100CE3B1E /* Sources */,
-				66F458231BF0549100CE3B1E /* Frameworks */,
-				66F458241BF0549100CE3B1E /* Resources */,
+				66F4587E1BF0557200CE3B1E /* Sources */,
+				66F4587F1BF0557200CE3B1E /* Frameworks */,
+				66F458801BF0557200CE3B1E /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				66F458291BF0549100CE3B1E /* PBXTargetDependency */,
+				66F458851BF0557200CE3B1E /* PBXTargetDependency */,
 			);
-			name = AxleTests;
-			productName = AxleTests;
-			productReference = 66F458261BF0549100CE3B1E /* AxleTests.xctest */;
+			name = "Axle-iOSTests";
+			productName = "Axle-iOSTests";
+			productReference = 66F458821BF0557200CE3B1E /* Axle-iOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		66F458941BF0557A00CE3B1E /* Axle-OSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 66F458A61BF0557B00CE3B1E /* Build configuration list for PBXNativeTarget "Axle-OSX" */;
+			buildPhases = (
+				66F458901BF0557A00CE3B1E /* Sources */,
+				66F458911BF0557A00CE3B1E /* Frameworks */,
+				66F458921BF0557A00CE3B1E /* Headers */,
+				66F458931BF0557A00CE3B1E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Axle-OSX";
+			productName = "Axle-OSX";
+			productReference = 66F458951BF0557A00CE3B1E /* Axle.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		66F4589D1BF0557B00CE3B1E /* Axle-OSXTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 66F458A91BF0557B00CE3B1E /* Build configuration list for PBXNativeTarget "Axle-OSXTests" */;
+			buildPhases = (
+				66F4589A1BF0557B00CE3B1E /* Sources */,
+				66F4589B1BF0557B00CE3B1E /* Frameworks */,
+				66F4589C1BF0557B00CE3B1E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				66F458A11BF0557B00CE3B1E /* PBXTargetDependency */,
+			);
+			name = "Axle-OSXTests";
+			productName = "Axle-OSXTests";
+			productReference = 66F4589E1BF0557B00CE3B1E /* Axle-OSXTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -146,10 +249,16 @@
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "Akio Yasui";
 				TargetAttributes = {
-					66F4581B1BF0549100CE3B1E = {
+					66F458781BF0557200CE3B1E = {
 						CreatedOnToolsVersion = 7.1;
 					};
-					66F458251BF0549100CE3B1E = {
+					66F458811BF0557200CE3B1E = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					66F458941BF0557A00CE3B1E = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					66F4589D1BF0557B00CE3B1E = {
 						CreatedOnToolsVersion = 7.1;
 					};
 				};
@@ -166,21 +275,37 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				66F4581B1BF0549100CE3B1E /* Axle */,
-				66F458251BF0549100CE3B1E /* AxleTests */,
+				66F458781BF0557200CE3B1E /* Axle-iOS */,
+				66F458811BF0557200CE3B1E /* Axle-iOSTests */,
+				66F458941BF0557A00CE3B1E /* Axle-OSX */,
+				66F4589D1BF0557B00CE3B1E /* Axle-OSXTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		66F4581A1BF0549100CE3B1E /* Resources */ = {
+		66F458771BF0557200CE3B1E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		66F458241BF0549100CE3B1E /* Resources */ = {
+		66F458801BF0557200CE3B1E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66F458931BF0557A00CE3B1E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66F4589C1BF0557B00CE3B1E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -190,28 +315,52 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		66F458171BF0549100CE3B1E /* Sources */ = {
+		66F458741BF0557200CE3B1E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66F458AE1BF055AF00CE3B1E /* Axle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		66F458221BF0549100CE3B1E /* Sources */ = {
+		66F4587E1BF0557200CE3B1E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66F4582C1BF0549100CE3B1E /* AxleTests.swift in Sources */,
+				66F458881BF0557200CE3B1E /* Axle_iOSTests.swift in Sources */,
+				66F458AD1BF055AF00CE3B1E /* Axle.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66F458901BF0557A00CE3B1E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66F458AF1BF055B000CE3B1E /* Axle.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66F4589A1BF0557B00CE3B1E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66F458A41BF0557B00CE3B1E /* Axle_OSXTests.swift in Sources */,
+				66F458AC1BF055AE00CE3B1E /* Axle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		66F458291BF0549100CE3B1E /* PBXTargetDependency */ = {
+		66F458851BF0557200CE3B1E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 66F4581B1BF0549100CE3B1E /* Axle */;
-			targetProxy = 66F458281BF0549100CE3B1E /* PBXContainerItemProxy */;
+			target = 66F458781BF0557200CE3B1E /* Axle-iOS */;
+			targetProxy = 66F458841BF0557200CE3B1E /* PBXContainerItemProxy */;
+		};
+		66F458A11BF0557B00CE3B1E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 66F458941BF0557A00CE3B1E /* Axle-OSX */;
+			targetProxy = 66F458A01BF0557B00CE3B1E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -305,55 +454,125 @@
 			};
 			name = Release;
 		};
-		66F458311BF0549100CE3B1E /* Debug */ = {
+		66F4588B1BF0557200CE3B1E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Axle/Info.plist;
+				INFOPLIST_FILE = "Axle-iOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = org.prioris.akkyie.Axle;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.prioris.akkyie.Axle-iOS";
+				PRODUCT_NAME = Axle;
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
-		66F458321BF0549100CE3B1E /* Release */ = {
+		66F4588C1BF0557200CE3B1E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Axle/Info.plist;
+				INFOPLIST_FILE = "Axle-iOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = org.prioris.akkyie.Axle;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.prioris.akkyie.Axle-iOS";
+				PRODUCT_NAME = Axle;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
-		66F458341BF0549100CE3B1E /* Debug */ = {
+		66F4588E1BF0557200CE3B1E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = AxleTests/Info.plist;
+				INFOPLIST_FILE = "Axle-iOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = org.prioris.akkyie.AxleTests;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.prioris.akkyie.Axle-iOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		66F458351BF0549100CE3B1E /* Release */ = {
+		66F4588F1BF0557200CE3B1E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = AxleTests/Info.plist;
+				INFOPLIST_FILE = "Axle-iOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = org.prioris.akkyie.AxleTests;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.prioris.akkyie.Axle-iOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		66F458A71BF0557B00CE3B1E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Axle-OSX/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.prioris.akkyie.Axle-OSX";
+				PRODUCT_NAME = Axle;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		66F458A81BF0557B00CE3B1E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Axle-OSX/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.prioris.akkyie.Axle-OSX";
+				PRODUCT_NAME = Axle;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		66F458AA1BF0557B00CE3B1E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Axle-OSXTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.prioris.akkyie.Axle-OSXTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		66F458AB1BF0557B00CE3B1E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Axle-OSXTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.prioris.akkyie.Axle-OSXTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
@@ -369,19 +588,35 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		66F458301BF0549100CE3B1E /* Build configuration list for PBXNativeTarget "Axle" */ = {
+		66F4588A1BF0557200CE3B1E /* Build configuration list for PBXNativeTarget "Axle-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				66F458311BF0549100CE3B1E /* Debug */,
-				66F458321BF0549100CE3B1E /* Release */,
+				66F4588B1BF0557200CE3B1E /* Debug */,
+				66F4588C1BF0557200CE3B1E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
-		66F458331BF0549100CE3B1E /* Build configuration list for PBXNativeTarget "AxleTests" */ = {
+		66F4588D1BF0557200CE3B1E /* Build configuration list for PBXNativeTarget "Axle-iOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				66F458341BF0549100CE3B1E /* Debug */,
-				66F458351BF0549100CE3B1E /* Release */,
+				66F4588E1BF0557200CE3B1E /* Debug */,
+				66F4588F1BF0557200CE3B1E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		66F458A61BF0557B00CE3B1E /* Build configuration list for PBXNativeTarget "Axle-OSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66F458A71BF0557B00CE3B1E /* Debug */,
+				66F458A81BF0557B00CE3B1E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		66F458A91BF0557B00CE3B1E /* Build configuration list for PBXNativeTarget "Axle-OSXTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66F458AA1BF0557B00CE3B1E /* Debug */,
+				66F458AB1BF0557B00CE3B1E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

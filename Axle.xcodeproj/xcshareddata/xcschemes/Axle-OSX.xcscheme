@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "66F4581B1BF0549100CE3B1E"
-               BuildableName = "Axle.framework"
-               BlueprintName = "Axle"
+               BlueprintIdentifier = "66F458941BF0557A00CE3B1E"
+               BuildableName = "Axle-OSX.framework"
+               BlueprintName = "Axle-OSX"
                ReferencedContainer = "container:Axle.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -32,9 +32,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "66F458251BF0549100CE3B1E"
-               BuildableName = "AxleTests.xctest"
-               BlueprintName = "AxleTests"
+               BlueprintIdentifier = "66F4589D1BF0557B00CE3B1E"
+               BuildableName = "Axle-OSXTests.xctest"
+               BlueprintName = "Axle-OSXTests"
                ReferencedContainer = "container:Axle.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -42,9 +42,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "66F4581B1BF0549100CE3B1E"
-            BuildableName = "Axle.framework"
-            BlueprintName = "Axle"
+            BlueprintIdentifier = "66F458941BF0557A00CE3B1E"
+            BuildableName = "Axle-OSX.framework"
+            BlueprintName = "Axle-OSX"
             ReferencedContainer = "container:Axle.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -64,9 +64,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "66F4581B1BF0549100CE3B1E"
-            BuildableName = "Axle.framework"
-            BlueprintName = "Axle"
+            BlueprintIdentifier = "66F458941BF0557A00CE3B1E"
+            BuildableName = "Axle-OSX.framework"
+            BlueprintName = "Axle-OSX"
             ReferencedContainer = "container:Axle.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -82,9 +82,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "66F4581B1BF0549100CE3B1E"
-            BuildableName = "Axle.framework"
-            BlueprintName = "Axle"
+            BlueprintIdentifier = "66F458941BF0557A00CE3B1E"
+            BuildableName = "Axle-OSX.framework"
+            BlueprintName = "Axle-OSX"
             ReferencedContainer = "container:Axle.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

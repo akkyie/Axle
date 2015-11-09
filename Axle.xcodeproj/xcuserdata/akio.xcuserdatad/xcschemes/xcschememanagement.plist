@@ -4,10 +4,15 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Axle.xcscheme</key>
+		<key>Axle-OSX.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>3</integer>
+		</dict>
+		<key>Axle-iOS.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -18,6 +23,46 @@
 			<true/>
 		</dict>
 		<key>66F458251BF0549100CE3B1E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>66F458401BF054E700CE3B1E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>66F458491BF054E700CE3B1E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>66F4585C1BF054F800CE3B1E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>66F458651BF054F800CE3B1E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>66F458781BF0557200CE3B1E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>66F458811BF0557200CE3B1E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>66F458941BF0557A00CE3B1E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>66F4589D1BF0557B00CE3B1E</key>
 		<dict>
 			<key>primary</key>
 			<true/>

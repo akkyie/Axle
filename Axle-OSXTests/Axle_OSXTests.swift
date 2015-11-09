@@ -1,15 +1,15 @@
 //
-//  AxleTests.swift
-//  AxleTests
+//  Axle_OSXTests.swift
+//  Axle-OSXTests
 //
 //  Created by Akio Yasui on 11/9/15.
 //  Copyright © 2015 Akio Yasui. All rights reserved.
 //
 
 import XCTest
-@testable import Axle
+@testable import Axle_OSX
 
-class AxleTests: XCTestCase {
+class Axle_OSXTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
